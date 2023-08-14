@@ -1,0 +1,167 @@
+<!-- Header without a border -->
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <!-- <ion-back-button defaultHref="index"></ion-back-button> -->
+    </ion-buttons>
+    <ion-grid>     
+      <ion-row class="ion-justify-content-center">     
+        <!-- <ion-col size="10">
+          <form>
+          <ion-searchbar
+            class="searchbar-input"
+            placeholder="Search Schools, Colleges, Universities"
+            clearIcon="string"
+          ></ion-searchbar>
+        </form>
+        </ion-col>       -->
+        <!-- <ion-col size="2"
+          ><ion-icon
+            name="person-circle-outline"
+            style="
+              position: absolute;
+              top: 12px;
+              right: 15px;
+              font-size: 30px;
+              color: #fff;
+            "></ion-icon
+        ></ion-col>      -->
+      </ion-row>   
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div class="white-bg" style="padding-top: 0">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <div>
+            <!-- <div class="area-bg">
+              <ion-icon name="location-outline"></ion-icon>Kyatham’s, punjagutta, hyderabad 505445.
+            </div> -->
+            <div class="slider_div">
+              <div class="menu_div">
+                <img src="assets/img/services-icon/playschool-icon.svg" />
+                <p class="img_type">Play Schools</p>
+              </div>
+              <div class="menu_div" (click)="SchoolList()">
+                <img src="assets/img/services-icon/school-icon.svg" />
+                <p class="img_type">Schools</p>
+              </div>
+              <div class="menu_div" (click)="CollegeList()">
+                <img src="assets/img/services-icon/college-icon.svg" />
+                <p class="img_type">Colleges</p>
+              </div>
+              <div class="menu_div" (click)="UniversityList()">
+                <img src="assets/img/services-icon/university-icon.svg" />
+                <p class="img_type">Universities</p>
+              </div>
+              <!-- <div class="menu_div">
+                <img src="assets/img/services-icon/admission-icon.png" />
+                <p class="img_type">Admission</p>
+              </div> -->
+              <div class="menu_div" (click)="TutorList()">
+                <img src="assets/img/services-icon/tutor-icon.png" />
+                <p class="img_type">Tutors</p>
+              </div>
+              <div class="menu_div" (click)="VendorList()">
+                <img src="assets/img/services-icon/vendor.png" />
+                <p class="img_type">Vendors</p>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- Advertise Slider -->
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <!-- Slider Start-->
+          <ion-slides
+            pager="false"
+            [options]="slideOpts"
+            style="position: relative">
+            <ion-slide *ngFor="let item of SchoolBannerList">
+              <img src="https://rightadmissionplus.com/{{item.Image}}" (click)="Detail(item.SchoolId)" />
+            </ion-slide>
+            <!-- <ion-slide>
+              <img src="/assets/img/ad-banner-two.jpg" />
+            </ion-slide> -->
+          </ion-slides>
+          <!-- Slider End-->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+            <h6>How to Get Admission</h6>
+                <img src="assets/img/Admission-Steps.png" style="width: 100%;"/>
+    </ion-grid>
+    <!-- Advertise Slider End-->
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <div>
+            <h6>Admission Going On</h6>
+            <div class="slider_div-bigger">
+              <div class="menu_div">
+                <div class="service-tag">Sri chaitanya institutions</div>
+                <img src="assets/img/get-started-slider-img1.jpg" />
+                <p class="img_type" (click)="redirectTonext()">View Info</p>
+              </div>
+              <div class="menu_div">
+                <div class="service-tag">Institutions name second</div>
+                <img src="assets/img/get-started-slider-img2.jpg" />
+                <p class="img_type" (click)="redirectTonext()">View Info</p>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <div>
+            <h6>Top Colleges in India</h6>
+            <div class="slider_div-bigger">
+              <div class="menu_div">
+                <div class="service-tag">College name one</div>
+                <img src="assets/img/get-started-slider-img3.jpg" />
+                <p class="img_type">View Info</p>
+              </div>
+              <div class="menu_div">
+                <div class="service-tag">College name two</div>
+                <img src="assets/img/get-started-slider-img4.jpg" />
+                <p class="img_type">View Info</p>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-footer>
+  <p>null</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="Dashboard()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="Messages()">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

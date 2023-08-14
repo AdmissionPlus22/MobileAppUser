@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Support</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="whire-bg">
+<ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <div class="ion-padding">
+          <ion-list lines="none">
+            <div class="top-headline">
+              <h6>Fillup the form</h6>
+            </div>
+            <form #contactForm="ngForm" class="form" (ngSubmit)="contactForm.reset();">
+              <ion-row>
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Name" placeholder="Name" name="Name">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Email" placeholder="Email" name="Email">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Phone" placeholder="Phone" name="Phone">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Subject" placeholder="Subject" name="Subject">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-textarea [(ngModel)]="Query" placeholder="Message" name="Query">
+                    </ion-textarea>
+                  </ion-item>
+                </ion-col>               
+             
+              </ion-row>
+            </form>           
+          </ion-list>
+          <ion-button expand="block" color="" class="full-radious" (click)="Save()">Send Message</ion-button>
+        </div>
+      </ion-col>
+      <div class="ion-padding">
+        <div class="prc_wrap">
+            <div class="prc_wrap_header">
+                <h4 class="property_block_title">Reach Us</h4>
+            </div>
+
+            <div class="prc_wrap-body">
+              <div class="contact-info">
+                  <h2>Get In Touch</h2>
+                  <p>
+                      If you have any queries, please communicate with us, our technical
+                      team will connect with you as soon as possible.
+                  </p>
+
+                  <div class="cn-info-detail">
+                      
+                      <div class="cn-info-content">
+                          <h4 class="cn-info-title"><i class="ti-home" style="font-size: 16px; margin-right: 5px;"></i>Reach Us</h4>
+                          <p>Right Admission Technologies<br/>
+                          1-2-66 to 193 , # 311, 3rd Floor, Bhuvana Towers , Sarojini Devi Road , Secunderabad 500003, Telangana , India</p>                    
+                      </div>
+                  </div>
+
+                  <div class="cn-info-detail">
+                     <div class="cn-info-content">
+                          <h4 class="cn-info-title"><i class="ti-email" style="font-size: 16px; margin-right: 5px;"></i>Drop a Mail</h4>
+                          <p>support@rightadmissionplus.com</p>
+                      </div>
+                  </div>
+
+                  <div class="cn-info-detail">
+                      <div class="cn-info-content">
+                          <h4 class="cn-info-title"><i class="ti-mobile" style="font-size: 16px; margin-right: 5px;"></i>Call Us</h4>
+                          <p>+91 9019300600, +91 9177866249, +91 9177866248</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <p>null</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="Home()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="Messages()">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

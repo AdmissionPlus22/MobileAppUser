@@ -1,0 +1,17 @@
+.top-cut-bg {display: block;box-sizing: border-box;height: 150px;background-color: #fff;clip-path: ellipse(85% 100% at 74% 0%);}
+.blue-color{color:#00ba74;text-align: right; margin-bottom: 0;}
+.blue-color-two{color:#00ba74;}
+
+ion-segment-button {
+    --indicator-box-shadow: transparent !important;
+    --background:#e4f8f0;
+    --color:#242f65;
+    --background-checked: linear-gradient(to right, #00ba74, #00ba74)!important;
+    --color-checked: white;
+    border-radius: 5px !important;
+    // padding: 2px;
+    margin: 0;
+    margin-right: 5px;
+    min-height: 40px;
+    font-size: 12px;
+  }

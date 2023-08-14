@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <!-- <ion-back-button defaultHref=""></ion-back-button> -->
+    </ion-buttons>
+    <ion-title>Vendor List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="white-bg" style="padding-top: 0">
+    <!-- <form>
+      <ion-row>
+        <ion-col size="12">
+          <ion-list>
+            <ion-item lines="none" class="input-no-underline gloabal-input">
+              <ion-select style="width: 100%" interface="action-sheet" (ionChange)="GetDropdowndata($event)" [(ngModel)]="Distance" name="Distance" placeholder="Select Area">
+                <ion-select-option value="5">5 Km</ion-select-option>
+                <ion-select-option value="10">10 Km</ion-select-option>
+                <ion-select-option value="25">25 Km</ion-select-option>
+                <ion-select-option value="50">50 Km</ion-select-option>
+                <ion-select-option value="100">100 Km</ion-select-option>
+                <ion-select-option value="500">500 Km</ion-select-option>
+                <ion-select-option value="1000">1000 Km</ion-select-option>
+                <ion-select-option value="2000">All</ion-select-option>
+
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+  
+    </ion-row>
+  </form> -->
+
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <h6>Vendors Near Me</h6>
+          <!-- Single List -->
+          <div class="single-list" *ngFor="let item of VendorList">
+            <div class="relative-position" (click)="Detail(item.VendorId)">
+              <img src="{{item.Image}}" />
+              <!-- Wish -->
+              <div class="wish-heart-area">
+                <i class="ti-heart"><sup class="like-count">5</sup></i>
+              </div>
+              <!-- Rate -->
+              <div class="rating-area">
+                <ul>
+                  <li><i class="ti-star mr-2"></i></li>
+                  <li><span class="white-color">3.5</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="content-area">
+              <div class="area-bg">
+                <h6 class="ellipsis-area" (click)="Detail(item.VendorId)">{{item.VendorName}}</h6>
+                <p class="gray-color">
+                  <i class="ti-location-pin mr-2"></i>{{item.Address}}
+                </p>
+                <!-- <p class="red-color half-area">
+                  <i class="ti-location-arrow mr-1"></i> 5 km
+                </p> -->
+                <p class="half-area">
+                  Category : {{item.CategoryName}}
+                </p>
+                <!-- <p class="half-area">Education Board : {{item.SchoolBoardName}}</p> -->
+                <p class="half-area">
+                  Vendor Code :
+                  <span class="red-color">12345</span>
+                </p>
+
+                  <!-- <p class="half-area">
+                    Starting Fees : <span class="red-color">₹25000</span>
+                  </p>-->
+                
+                <!-- <p class="half-area">{{item.ViewCount}} People viewed this</p> -->
+                <div class="cources_facts">
+                  
+                </div>
+                <div class="feature-box-area">
+                  <ul>
+                    <li (click)="Detail(item.VendorId)">View More</li>                   
+                  </ul>
+                </div>
+                <div class="compare-area">
+                  <!-- <div class="half-area">
+                    <ion-item lines="none">
+                      <ion-checkbox slot="start"></ion-checkbox>
+                      <ion-label>Compare</ion-label>
+                    </ion-item>
+                  </div> -->
+                  <div class="half-area">
+                    <div class="comment-share-area">
+                      <ul>
+                        <li><i class="ti-comment-alt mb-2"></i></li>
+                        <li><i class="ti-sharethis mb-2"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p>null</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="Dashboard()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="Messages()">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

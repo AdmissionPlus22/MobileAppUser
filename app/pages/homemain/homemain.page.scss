@@ -1,0 +1,49 @@
+ion-slide{background-color: #eaf7f0; padding: 10px; width: 94%!important;}
+ion-slide img{border-radius: 0px; height: 160px;
+      object-fit: cover;
+      object-position: top;
+      width: 100%;}
+.slider_div{display: -webkit-box;overflow-y: auto; margin-left: 0px;
+        .menu_div{margin-right: 10px;position: relative; text-align: center; background-color: #00ba74; padding: 8px 0; border-radius: 2px; width:100px;
+                   img{height:20px;}
+                  .img_type{font-size: 10px;bottom: 0;left: 0;margin-bottom: 0px;width: 100%;padding: 0px 2px;text-align: center; margin-top: 0;}
+                  
+                 }
+                 .menu_div p{color:#fff;}
+           }
+.slider_div::-webkit-scrollbar { display: none; }
+
+.slider_div-bigger{display: -webkit-box;overflow-y: auto; margin-left: 0px;
+      .menu_div{margin-right: 10px;position: relative; text-align: center; background-color: #f2f2f2; padding: 10px; border-radius: 0px; width: 86%;
+            img {
+                  height: 160px;
+                  object-fit: cover;
+                  object-position: top;
+                  width: 100%;
+                }
+                .img_type{font-size: 12px;bottom: 0;left: 0;margin-bottom: 0px;width: 100%;padding: 2px 2px;text-align: center; margin-top: 0;}
+                
+               }
+               .menu_div p{color:#4d5868; }
+               .service-tag {
+                  position: absolute;
+                  top: 20px;
+                  left: 15px;
+                  font-size: 10px;
+                  color: #FFFFFF;
+                  font-weight: 500;
+                  z-index: 8;
+                  padding: 5px;
+                  background: #022b9a;
+                  border-radius: 0;          
+                }
+         }
+.slider_div-bigger::-webkit-scrollbar { display: none; }
+
+.admin-image{border-radius: 100%; width: 38px; height: 38px; object-fit: cover;overflow: hidden;}
+
+.area-bg{background-color: #eaf7f0; font-size: 12px; padding: 8px; color:#4d5868; margin-bottom: 15px;}
+.area-bg ion-icon{font-size: 18px; margin:0 5px; vertical-align: middle; color:#00ba74;}
+
+
+

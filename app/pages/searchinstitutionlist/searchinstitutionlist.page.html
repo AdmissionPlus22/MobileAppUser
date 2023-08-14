@@ -1,0 +1,181 @@
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Search Result</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="white-bg" style="padding-top: 0">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <h6>Most Viewed</h6>
+          <!-- Single List -->
+          <div class="single-list" (click)="redirectTonext()">
+            <div class="relative-position">
+            <img src="assets/img/school-img-1.jpg" />
+            <!-- Wish -->
+            <div class="wish-heart-area">
+              <i class="ti-heart"></i>
+            </div>
+            <!-- Rate -->
+            <div class="rating-area">
+              <ul>
+                <li><i class="ti-star mr-2"></i></li>
+                <li><span class="white-color">4.7</span></li>
+              </ul>
+            </div>
+            </div>
+            <div class="content-area">
+              <div class="area-bg">
+                <h6 class="ellipsis-area">School Name International School</h6>
+                <p class="gray-color">
+                  <i class="ti-location-pin mr-2"></i>Kyatham’s , punjagutta,
+                  hyderabad 505445
+                </p>
+                <p class="red-color half-area">
+                  <i class="ti-timer mr-2"></i> 3.6 km
+                </p>
+                <p class="half-area">Education Board : CBSC</p>
+                <p>
+                  School Code :
+                  <span class="red-color">01240124012401</span>
+                </p>
+                <p class="half-area">
+                  Starting Fees : <span class="red-color">₹25000</span>
+                </p>
+                <p class="half-area">16 People viewed this</p>
+                <div class="cources_facts">
+                  <ul class="cources_facts_list">
+                    <li class="facts-1">VIP</li>
+                    <li class="facts-2">Coupon : Smart 20%</li>
+                  </ul>
+                </div>
+                <div class="feature-box-area">
+                  <ul>
+                    <li>View Info</li>
+                    <li>Features</li>
+                    <li>Fees</li>
+                    <li>Seat Availability</li>
+                    <li>Go to Admission</li>
+                    <li>Courses Offer</li>
+                  </ul>
+                </div>
+                <div class="compare-area">
+                  <div class="half-area">
+                   <ion-item lines="none">
+                  <ion-checkbox slot="start"></ion-checkbox>
+                  <ion-label>Compare</ion-label>
+                   </ion-item>
+                  </div>
+                  <div class="half-area">
+                    <div class="comment-share-area">
+                    <ul>
+                      <li><i class="ti-comment-alt mb-2"></i></li>
+                      <li><i class="ti-sharethis mb-2"></i></li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single List -->
+          <div class="single-list" (click)="redirectTonext()">
+            <div class="relative-position">
+            <img src="assets/img/school-img-2.jpg" />
+            <!-- Wish -->
+            <div class="wish-heart-area">
+              <i class="ti-heart"></i>
+            </div>
+            <!-- Rate -->
+            <div class="rating-area">
+              <ul>
+                <li><i class="ti-star mr-2"></i></li>
+                <li><span class="white-color">4.7</span></li>
+              </ul>
+            </div>
+            </div>
+            <div class="content-area">
+              <div class="area-bg">
+                <h6 class="ellipsis-area">School Name International School</h6>
+                <p class="gray-color">
+                  <i class="ti-location-pin mr-2"></i>Kyatham’s , punjagutta,
+                  hyderabad 505445
+                </p>
+                <p class="red-color half-area">
+                  <i class="ti-timer mr-2"></i> 3.6 km
+                </p>
+                <p class="half-area">Education Board : CBSC</p>
+                <p>
+                  School Code :
+                  <span class="red-color">01240124012401</span>
+                </p>
+                <p class="half-area">
+                  Starting Fees : <span class="red-color">₹25000</span>
+                </p>
+                <p class="half-area">16 People viewed this</p>
+                <div class="cources_facts">
+                  <ul class="cources_facts_list">
+                    <li class="facts-1">VIP</li>
+                    <li class="facts-2">Coupon : Smart 20%</li>
+                  </ul>
+                </div>
+                <div class="feature-box-area">
+                  <ul>
+                    <li>View Info</li>
+                    <li>Features</li>
+                    <li>Fees</li>
+                    <li>Seat Availability</li>
+                    <li>Go to Admission</li>
+                    <li>Courses Offer</li>
+                  </ul>
+                </div>
+                <div class="compare-area">
+                  <div class="half-area">
+                   <ion-item lines="none">
+                  <ion-checkbox slot="start"></ion-checkbox>
+                  <ion-label>Compare</ion-label>
+                   </ion-item>
+                  </div>
+                  <div class="half-area">
+                    <div class="comment-share-area">
+                    <ul>
+                      <li><i class="ti-comment-alt mb-2"></i></li>
+                      <li><i class="ti-sharethis mb-2"></i></li>
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p>null</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="Dashboard()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="Messages()">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>

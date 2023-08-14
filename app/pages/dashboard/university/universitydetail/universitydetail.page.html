@@ -1,0 +1,325 @@
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+
+      <!-- <ion-back-button defaultHref=""></ion-back-button> -->
+    </ion-buttons>
+    <ion-title>{{UniversityDetails.InstituteName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="white-bg" style="padding-top: 0">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <!-- Single List -->
+          <div class="single-list">
+            <div class="relative-position">
+              <img src="{{UniversityDetails.Image}}" />
+              <!-- Wish -->
+              <div class="wish-heart-area">
+                <i class="ti-heart"></i>
+              </div>
+              <!-- Rate -->
+              <!-- <div class="rating-area">
+                
+              </div> -->
+            </div>
+            <div class="content-area">
+              <div class="area-bg">
+                <h6 class="ellipsis-area">
+                  {{UniversityDetails.InstituteName}}
+                </h6>
+                <p class="gray-color">
+                  <i class="ti-location-pin mr-2"></i>{{UniversityDetails.Address}}
+                </p>
+                
+                <!-- <div class="cources_facts">
+                  <ul class="cources_facts_list">
+                    <li class="facts-1">Admission Starting Soon</li>
+                  </ul>
+                </div> -->
+                <!-- Segment Area -->
+                <div class="segment-area">
+                  <ion-segment [(ngModel)]="segment" scrollable>
+                    <ion-segment-button value="first"
+                      >Online Admission</ion-segment-button
+                    >
+                    <ion-segment-button value="second"
+                      >About Us</ion-segment-button
+                    >
+                    <ion-segment-button value="third"
+                      >Eligibility Criteria</ion-segment-button
+                    >
+                    <ion-segment-button value="fourth"
+                      >Facilities</ion-segment-button
+                    >
+                    <ion-segment-button value="fifth"
+                      >Academic Performance</ion-segment-button
+                    >
+                    <ion-segment-button value="sixth"
+                      >Annual Fee Structure</ion-segment-button
+                    >
+                    <ion-segment-button value="seventh"
+                      >Seat Availability</ion-segment-button
+                    >
+                  </ion-segment>
+                  <div [ngSwitch]="segment">
+                    <ion-card *ngSwitchCase="'first'">
+                      <ion-card-content>
+                        <!-- Inside Contents Start -->
+                        <div class="table-admission table-responsive" id="#">
+                          <table class="table table-hover mb-0">
+                            <thead>
+                              <tr class="table-success">
+                                <th class="w-30 text-center">Stream</th>
+                                <th class="w-30 text-center">Session</th>
+                                <!-- <th class="w-10 text-center">Session</th> -->
+                                <th class="w-25 text-center">
+                                  Application Date(s)
+                                </th>
+                                <th class="w-15 text-center">
+                                  Application Fees
+                                </th>
+                                <th class="w-30 text-center">Available Seat</th>
+                                <th class="w-20 text-center">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let item of UniversityAdmissionList">
+                                <td class="font-weight-semibold">{{item.StreamName}}</td>
+                                <td class="font-weight-semibold">{{item.Session}}</td>
+                                <!-- <td class="text-center">2022-2023</td> -->
+                                <td class="text-center">
+                                  {{item.Application_Start_Date}} - {{item.Application_End_Date}}
+                                </td>
+                                <td class="text-center">₹ {{item.ApplicationFee}}</td>
+                                <td class="text-center">{{item.SeatAvail}}</td>
+                                <td class="text-center green-color" (click)="ApplyForAdmission(item.UniversityId,item.StreamId)">Apply</td>
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <!-- Inside Contents End -->
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'second'">
+                      <ion-card-content>
+                        <!-- Inside Contents Start -->
+                        <div class="content-block text-justify">
+                          <h4 class="heading-xl">About Us:</h4>
+                          <p></p>
+                          <p>
+                            <strong>{{UniversityDetails.InstituteName}}</strong>
+                            {{UniversityDetails.SmallDescription}}
+                          </p>
+                         
+                          <p>&nbsp;</p>
+
+                          <p><strong>UNIVERSITY PROFILE</strong></p>
+                          <p>
+                            <strong>{{UniversityDetails.InstituteName}}</strong>
+                            {{UniversityDetails.UniversityProfile}}
+                          </p>                         
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>ADMISSION DETAILS</strong></p>
+                          <p>
+                            {{UniversityDetails.AdmissionDetails}}
+                          </p>                         
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>ESTABLISHED</strong></p>
+                          <p>
+                            {{UniversityDetails.Established}}
+                          </p>  
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>PRINCIPAL</strong></p>
+
+                          <p>
+                            {{UniversityDetails.PrincipalName}}
+                          </p> 
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>MEDIUM OF INSTRUCTION</strong></p>
+
+                          <p>
+                            {{UniversityDetails.Medium}}
+                          </p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>UNIVERSITY TIMINGS</strong></p>
+
+                          <p>
+                            {{UniversityDetails.Timing}}
+                          </p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>STREAMS</strong></p>
+
+                          <p>
+                            {{UniversityDetails.Stream}}
+                          </p>
+                                                   
+                        </div>
+                        <!-- Inside Contents End -->
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'third'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Eligibility Criteria:</h4><!---->
+                          <div class="card card-green"><div class="card-header"> 2023-2024 </div><!---->
+                          <div class="card-body" *ngFor="let item of UniversityEligibilityList"><div class="tbl-comm"><div class="tbl-cell w120"><strong>{{item.StreamName}}</strong>
+                          </div><div class="tbl-cell">{{item.Description}}</div></div></div>
+                            </div></div>
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'fourth'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Facilities:</h4><h5 class="heading-sm txt-green mt-4">Infrastructure</h5>
+                          <ul class="facility-list" *ngFor="let item of UniversityInfraFacilityList">
+                            <!----><li *ngIf = "item.IsActive == 'True'; else elsetag"><!----><ion-icon style="color:#00ba74;" name="checkmark-outline"></ion-icon><!----> {{item.InfraName}} </li>
+                            <ng-template #elsetag>
+                           <!----><li><!----><ion-icon style="color:#e74040;" name="close-outline"></ion-icon><!----> {{item.InfraName}} </li>
+                            </ng-template>
+                          </ul>
+                            <h5 class="heading-sm txt-green mt-4">Extra-curricular activities</h5>
+                            <ul class="facility-list" *ngFor="let item of UniversityExtraCurriFacilityList">
+                              <!----><li *ngIf = "item.IsActive == 'True'; else elsetag"><!----><ion-icon style="color:#00ba74;" name="checkmark-outline"></ion-icon><!----> {{item.ExtraCarricularFacilityName}} </li>
+                              <ng-template #elsetag>
+                                <!----><li><!----><ion-icon style="color:#e74040;" name="close-outline"></ion-icon><!----> {{item.ExtraCarricularFacilityName}} </li>
+                                 </ng-template>
+                            </ul>
+                              <h5 class="heading-sm txt-green mt-4">Sports &amp; fitness</h5>
+                              <ul class="facility-list" *ngFor="let item of UniversitySportFacilityList">
+                                <!----><li *ngIf = "item.IsActive == 'True'; else elsetag"><!----><ion-icon style="color:#00ba74;" name="checkmark-outline"></ion-icon><!----> {{item.SportsFacilityName}} </li>
+                                <ng-template #elsetag>
+                                  <!----><li><!----><ion-icon style="color:#e74040;" name="close-outline"></ion-icon><!----> {{item.SportsFacilityName}} </li>
+                                   </ng-template>
+                              </ul></div>
+                      </ion-card-content>
+                    </ion-card>
+
+                     <ion-card *ngSwitchCase="'fifth'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Academic Performance:</h4><div><div><div class="details"><p></p><p><strong>{{UniversityAcademicPerformanceDetails.Year}}</strong></p>
+          
+                          <table>
+                            <tbody *ngFor="let item of UniversityAcademicPerformanceDetails">
+                              <tr>
+                                <td>No. of students Appeared&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                                <td>{{item.Total_Number_Of_Students}}</td>
+                              </tr>
+                              <tr>
+                                <td>No. of students Passed</td>
+                                <td>{{item.Total_No_Of_Students_Passed}}</td>
+                              </tr>
+                              <tr>
+                                <td>Above 90%</td>
+                                <td>&nbsp; {{item.Above90Percent}}</td>
+                              </tr>
+                              <tr>
+                                <td>Above 70%</td>
+                                <td>{{item.Above70Percent}}</td>
+                              </tr>
+                              <tr>
+                                <td>Above 50%</td>
+                                <td>{{item.Above50Percent}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                                                   
+                          <p></p></div></div></div></div>
+                      </ion-card-content>
+                    </ion-card> 
+
+                    <ion-card *ngSwitchCase="'sixth'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Annual Fee Structure:</h4>
+                          <ion-list>
+                            <ion-item>
+                              <ion-select interface="action-sheet" placeholder="Select Class">
+                                <ion-select-option value="apples">Class One</ion-select-option>
+                                <ion-select-option value="oranges">Class Two</ion-select-option>
+                                <ion-select-option value="bananas">Class Three</ion-select-option>
+                              </ion-select>
+                            </ion-item>
+                          </ion-list>
+                          <div><div> Minimum Fees: <div class="txt24">₹ 0</div></div><div> Maximum Fees: <div class="txt24">₹ 0</div></div></div></div>
+                      </ion-card-content>
+                    </ion-card>
+                    <ion-card *ngSwitchCase="'seventh'">
+                      <ion-card-content>
+                        <!-- Inside Contents Start -->
+                        <div class="table-admission table-responsive" id="#">
+                          <table class="table table-hover mb-0">
+                            <thead>
+                              <tr class="table-success">
+                                <th class="w-30 text-center">Stream</th>
+                                <th class="w-30 text-center">Session</th>
+                                <!-- <th class="w-10 text-center">Session</th> --> 
+                                <th class="w-30 text-center">Total Seat</th>                              
+                                <th class="w-30 text-center">Available Seat</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let item of UniversityAdmissionList">
+                                <td class="font-weight-semibold text-center">{{item.StreamName}}</td>
+                                <td class="font-weight-semibold text-center">{{item.Session}}</td>
+                                <!-- <td class="text-center">2022-2023</td> -->
+                                <td class="text-center">{{item.Seat}}</td>
+                                <td class="text-center">{{item.SeatAvail}}</td>
+                              </tr>                             
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Inside Contents End -->
+                      </ion-card-content>
+                    </ion-card>
+                  </div>
+                </div>
+                <!-- Segment Area End-->
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p>null</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="Home()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="Messages()">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>
+
+

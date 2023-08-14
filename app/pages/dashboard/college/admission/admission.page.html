@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Admission form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <!-- <div class="white-bg">
+  <div class="curved-div">
+    <img class="logo-img" src="assets/img/logo.png" alt="">
+  </div> -->
+<ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <div class="ion-padding">
+          <ion-list lines="none">
+            <div class="top-headline">
+              <h6>Fill out this form</h6>
+              <p>Please complete your information</p>
+            </div>
+            <form>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="ApplicantName" placeholder="First Name" name="ApplicantName">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Gender" placeholder="Gender" name="Gender">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="date" [(ngModel)]="DOB" placeholder="DOB" name="DOB">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="number" [(ngModel)]="Phone" placeholder="Phone Number" name="Phone">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Fathername" placeholder="Father's Name" name="Fathername">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="MotherName" placeholder="Mother's Name" name="MotherName">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="State" placeholder="State" name="State">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="City" placeholder="City" name="City">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>            
+
+                <ion-col size="12">
+                  <ion-item lines="none" class="gloabal-input">
+                    <ion-input type="text" [(ngModel)]="Pin" placeholder="Pin" name="Pin">
+                    </ion-input>
+                  </ion-item>
+                </ion-col>
+             
+              </ion-row>
+            </form>
+            <!-- <ion-item>
+              <ion-checkbox color="primary" slot="start"></ion-checkbox>
+              <ion-label style="font-size: 12px; color:#D0CFCF;">By creating an account you agree to our terms</ion-label>
+            </ion-item> -->
+          </ion-list>
+          <ion-button expand="block" color="" class="full-radious" (click)="Save()">Continue</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<!-- </div> -->
+</ion-content>

@@ -1,0 +1,50 @@
+.top-cut-bg {display: block;box-sizing: border-box;height: 150px;clip-path: ellipse(85% 100% at 74% 0%);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(40,159,179,1) 100%);
+  }
+  h6{font-size: 16px;}
+  p{text-align: left; font-size: 14px; color:#A1A3B5; margin-bottom: 5px; margin-top: 0;}
+  span{color:#EC6000;}
+  .mar-top-30{margin-top: 30px;}
+  .otp-img{width: 10px; margin-right: 10px; vertical-align: middle;position: relative;top: -2px;}
+  .light-color{color:#A1A3B5;}
+  .or-devider-img{width: 100%; margin-top: 30px; text-align: center;}
+  .skip-text{text-transform: uppercase; font-size: 16px; color:#EC6000; text-align: right;padding-right: 16px; margin-bottom: 0;}
+  
+  
+  .tag-block{width:100%; float: left; border:1px solid #ff6700; border-radius: 70px; padding: 2px 12px; color:#ff6700; font-size: 15px; height:30px; text-align: center; margin-bottom: 10px;}
+  .tag-block span{float:right; font-weight: 600;}
+  
+  .img-area{float:left; position: relative; width: 100%; height: 90px; margin-bottom: 10px; background-color:#ffffff; border-radius: 5px;}
+  .img-area img {height: 90px;object-fit: cover;object-position: top; border-radius: 100%; overflow: hidden; width: 90px; margin: 0 auto;}
+  // .img-area .add-button{position: absolute; width:24px; height: 24px; top:-10px; right:-5px; background-color: #ff6700; color:#fff; border-radius: 100%; text-align: center; padding: 1px 0; z-index: 9;}
+  .img-area .add-button{position: absolute; width:24px; height: 24px; top:-2px; right:0; background-color: #ff6700; color:#fff; border-radius: 0 0 70px 70px; text-align: center; padding: 1px 0; z-index: 9;}
+  .img-area ion-icon{font-weight: 700;font-size: 20px;vertical-align: text-top;}
+  .blank-img{width: 40%!important; object-fit: contain!important; object-position:center!important; margin: 0 30%;}
+  .mar-top-30{margin-top: 30px;}
+  
+  .photo-close-btn{position: absolute; right:-5px; width:20px!important;height: 20px!important; z-index: 99; top:-5px;}
+  .visible-overflow{overflow: visible;}
+  
+  
+  // Upload Browse Btn 
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;align-items: center;justify-content: center;height: 100%;
+    }
+  .upload-btn-wrapper .btn {
+    padding: 20px 0px;
+    width: 100%;
+    background: url(/assets/img/image-gallery.svg) no-repeat center;
+    }
+  .upload-btn-wrapper input[type="file"] {
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+  }

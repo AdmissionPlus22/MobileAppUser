@@ -1,0 +1,62 @@
+<ion-content>
+  <div class="white-bg">
+    <div class="curved-div">
+      <img class="logo-img" src="assets/img/logo.png" alt="" />
+    </div>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <div class="ion-padding">
+            <ion-list lines="none">
+              <div class="top-headline">
+                <h6>Verify your number</h6>
+                <p>We sent you a 4-digit code to verify your number</p>
+              </div>
+              <form>
+                <ion-row>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="gloabal-input">
+                      <ion-input #otp1 required maxLength="1" (keyup)="gotoNextField($event,otp2,'')" [(ngModel)]="Otp1"
+                        name="Otp1"> </ion-input>
+                    </ion-item>
+
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="gloabal-input">
+                      <ion-input #otp2 required maxLength="1" (keyup)="gotoNextField($event,otp3,otp1)"
+                        [(ngModel)]="Otp2" name="Otp2">
+                      </ion-input>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="gloabal-input">
+                      <ion-input #otp3 required maxLength="1" (keyup)="gotoNextField($event,otp4,otp2)"
+                        [(ngModel)]="Otp3" name="Otp3">
+                      </ion-input>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size="3">
+                    <ion-item lines="none" class="gloabal-input">
+                      <ion-input #otp4 required maxLength="1" (keyup)="gotoNextField($event,'',otp3)" [(ngModel)]="Otp4"
+                        name="Otp4">
+                      </ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </form>
+            </ion-list>
+            <ion-button expand="block" color="" class="full-radious" (click)="Login()">Verify</ion-button>
+            <div class="buttons-area">
+              <ion-col size="12">
+                <p class="text-center">
+                  Didnt receive the code?
+                  <span (click)="Resend()" class="blue-color-two">Resend</span>
+                </p>
+              </ion-col>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

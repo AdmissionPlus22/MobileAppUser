@@ -1,0 +1,424 @@
+<ion-header>
+  <ion-toolbar class="header-bg-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="white-bg" style="padding-top: 0">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <!-- Single List -->
+          <div class="single-list">
+            <div class="relative-position">
+              <img src="assets/img/school-img-1.jpg" />
+              <!-- Wish -->
+              <div class="wish-heart-area">
+                <i class="ti-heart"></i>
+              </div>
+              <!-- Rate -->
+              <div class="rating-area">
+                <ul>
+                  <li>ISC, ICSE</li>
+                  <li><span class="white-color">Co-ed</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="content-area">
+              <div class="area-bg">
+                <h6 class="ellipsis-area">
+                  Delhi public school megacity, kolkata
+                </h6>
+                <p class="gray-color">
+                  <i class="ti-location-pin mr-2"></i>Kalikapur , rajarhat,
+                  north 24 parganas , kolkata – 700135.
+                </p>
+                <p>
+                  One of the premier and most progressive educational
+                  institutions in India!
+                </p>
+                <div class="cources_facts">
+                  <ul class="cources_facts_list">
+                    <li class="facts-1">Admission Starting Soon</li>
+                  </ul>
+                </div>
+                <!-- Segment Area -->
+                <div class="segment-area">
+                  <ion-segment [(ngModel)]="segment" scrollable>
+                    <ion-segment-button value="first"
+                      >Online Admission</ion-segment-button
+                    >
+                    <ion-segment-button value="second"
+                      >About Us</ion-segment-button
+                    >
+                    <ion-segment-button value="third"
+                      >Eligibility Criteria</ion-segment-button
+                    >
+                    <ion-segment-button value="fourth"
+                      >Facilities</ion-segment-button
+                    >
+                    <ion-segment-button value="fifth"
+                      >Academic Performance</ion-segment-button
+                    >
+                    <ion-segment-button value="sixth"
+                      >Annual Fee Structure</ion-segment-button
+                    >
+                  </ion-segment>
+                  <div [ngSwitch]="segment">
+                    <ion-card *ngSwitchCase="'first'">
+                      <ion-card-content>
+                        <!-- Inside Contents Start -->
+                        <div class="table-admission table-responsive" id="#">
+                          <table class="table table-hover mb-0">
+                            <thead>
+                              <tr class="table-success">
+                                <th class="w-30">Class</th>
+                                <th class="w-10 text-center">Session</th>
+                                <th class="w-25 text-center">
+                                  Application Date(s)
+                                </th>
+                                <th class="w-15 text-center">
+                                  Application Fees
+                                </th>
+                                <th class="w-20 text-center">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="font-weight-semibold">Class 2</td>
+                                <td class="text-center">2022-2023</td>
+                                <td class="text-center">
+                                  01 Feb, 2022 12:00 AM - 30 Nov, 2022 11:59 PM
+                                </td>
+                                <td class="text-center">₹ 25</td>
+                                <td class="text-center green-color">Apply</td>
+                              </tr>
+                              <tr>
+                                <td class="font-weight-semibold">Class 3</td>
+                                <td class="text-center">2022-2023</td>
+                                <td class="text-center">
+                                  01 Feb, 2022 12:00 AM - 30 Nov, 2022 11:59 PM
+                                </td>
+                                <td class="text-center">₹ 30</td>
+                                <td class="text-center green-color">Apply</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <!-- Inside Contents End -->
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'second'">
+                      <ion-card-content>
+                        <!-- Inside Contents Start -->
+                        <div class="content-block text-justify">
+                          <h4 class="heading-xl">About Us:</h4>
+                          <p></p>
+                          <p>
+                            <strong>Delhi Public School Megacity</strong> is an
+                            academic institution that follows a progressive
+                            educational system. The school follows a curriculum
+                            that truly believes in developing life skills in
+                            students and making them global citizens. We are
+                            affiliated with CISCE Board (ICSE and ISC).
+                          </p>
+
+                          <p>
+                            The school promotes a holistic learning system that
+                            caters to all-around development of its students and
+                            provides a challenging environment for students to
+                            reach their optimum potential. Our school was
+                            established on 25th April 2004 and is situated in
+                            the city of Kolkata, West Bengal, India. It is a
+                            co-educational school with over 6050 students
+                            equipped with modern technology. We follow the
+                            latest teaching pedagogy and have received numerous
+                            awards in the field of academic excellence, sports,
+                            and various other curricular activities.
+                          </p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>SCHOOL PROFILE</strong></p>
+
+                          <p>
+                            <strong>DPS MEGACITY</strong> is an ISO accredited
+                            and ISA recognized educational institution(for the
+                            second time), which has been recently awarded the
+                            much coveted The Telegraph School of the Year Award.
+                            In recent times it has also been embellished with
+                            honors like The Telegraph award for the ‘School with
+                            Best Co- Curricular Practices’ the ‘Sankalp Awards
+                            for Best Co-Curricular Practices’ and ‘The Gurukul
+                            Award for the Best Maintained School’. The Times of
+                            India had rated the school as the best in Eastern
+                            India among the upcoming schools.
+                            <strong
+                              >The school also has received the prestigious
+                              ‘Daan Utsav Samman’</strong
+                            >
+                            for its overall contribution to society. These are
+                            some of the many awards that the school has been
+                            adorned in recent years. The school, in only
+                            seventeen years of its evolutionary journey, has
+                            established itself as a premiere educational
+                            institution for its sense of genuine concern and
+                            profound understanding of children and their world,
+                            state-of-the-art infrastructure which includes
+                            laboratories, football field, basketball, tennis and
+                            volleyball Courts, swimming Pool and a shooting
+                            range, equal importance to curricular and
+                            co-curricular activities, individual attention,
+                            global interaction, the earnestness to create
+                            holistic individuals for tomorrow’s society,
+                            providing equal opportunities to the
+                            underprivileged, sincere commitment to social
+                            service, a dynamic system of growth, and creation of
+                            individual leaders. Today, it is one of the fastest
+                            growing educational institutions in the country,
+                            which has been able to strike an exquisite balance
+                            between the curricular and co-curricular.
+                          </p>
+
+                          <p>
+                            In the last fourteen years, our results at the ICSE
+                            and ISC Examinations have been consistently
+                            brilliant, featuring toppers at the State and
+                            National levels. Our performance at the various
+                            Olympiads and pan India competitive examinations has
+                            been quite brilliant.
+                          </p>
+
+                          <p>
+                            <strong>DPS MEGACITY</strong> is a school that
+                            nurtures the present on the pedestal of the future.
+                            A state-of-the-art infrastructure, sports facilities
+                            that adhere to national standards, air conditioning
+                            in all classrooms, solar panels to supplement the
+                            electricity supply, adherence to the innovations and
+                            modernization in the field of education, maintaining
+                            the highest performance standards nationally in the
+                            board examinations, and a rare and exquisite balance
+                            between the curricular and co-curricular make the
+                            school a true harbinger of the most promising and
+                            dynamic educational future.
+                          </p>
+
+                          <p>
+                            Well-equipped laboratories, well-resourced
+                            libraries, a most prolific chain of subject
+                            application based events, participation in the most
+                            coveted co-curricular competitions in the country
+                            and curving a lasting niche there, the enrollment of
+                            students in the best of the universities after
+                            passing out from <strong>DPS MEGACITY</strong>, the
+                            faculty being honored and felicitated on a regular
+                            basis, give the school a unique identity, one of
+                            time transcending competence and preparedness for
+                            all the unpredictability of tomorrow.
+                          </p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>ADMISSION DETAILS</strong></p>
+
+                          <p>
+                            When to Enquire<strong> :&nbsp;</strong
+                            >October&nbsp;- February
+                          </p>
+
+                          <p>
+                            When Forms For Admission Get Distributed<strong>
+                              :</strong
+                            >&nbsp;October&nbsp;onwards
+                          </p>
+
+                          <p>
+                            Age Group<strong> :</strong>&nbsp;3+ years as on
+                            30th September,2023 (Nursery)
+                          </p>
+
+                          <p>
+                            Admission Levels&nbsp;: Nursery to Class IX &amp; XI
+                          </p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>ESTABLISHED</strong></p>
+
+                          <p>2004</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>PRINCIPAL</strong></p>
+
+                          <p>Ms. Indrani Sanyal</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>MEDIUM OF INSTRUCTION</strong></p>
+
+                          <p>English</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>SCHOOL TIMINGS</strong></p>
+
+                          <p>
+                            Class Nursery - I : Mon - Fri 9:30 A.M - 1:00 P.M
+                            (Tentative)
+                          </p>
+
+                          <p>
+                            Class II - Class III : Mon - Fri 9:30 A.M - 2:45 P.M
+                            (Tentative)
+                          </p>
+
+                          <p>
+                            Class IV - Class X : Mon - Fri 8:30 A.M - 2:45 P.M
+                            (Tentative)
+                          </p>
+
+                          <p>
+                            Class XI and XII : Mon - Fri 8:30 A.M - 1:00 P.M
+                            (Tentative)
+                          </p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>STREAMS FOR CLASS XI / XII</strong></p>
+
+                          <p>Science</p>
+
+                          <p>Commerce</p>
+
+                          <p>Humanities</p>
+                        </div>
+                        <!-- Inside Contents End -->
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'third'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Eligibility Criteria:</h4><!----><div class="card card-green"><div class="card-header"> 2022-2023 </div><!----><div class="card-body"><div class="tbl-comm"><div class="tbl-cell w120"><strong>NURSERY</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2018 and 30/09/2019</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>KG I</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2017 and 30/09/2018</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>KG II</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2016 and 30/09/2017</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>I</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2015 and 30/09/2016</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>II</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2014 and 30/09/2015</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>III</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2013 and 30/09/2014</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>IV</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2012 and 30/09/2013</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>V</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2011 and 30/09/2012</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>VI</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2010 and 30/09/2011</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>VII</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2009 and 30/09/2010</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>VIII</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2008 and 30/09/2009</em></div></div></div></div><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>IX</strong></div><div class="tbl-cell">Admission open From <strong>20/10/2021 To 05/04/2022</strong><div><em>Date of Birth between 01/10/2007 and 30/09/2008</em></div></div></div></div></div><div class="card card-green"><div class="card-header"> 2022-2023(XI) </div><!----><div class="card-body"><div class="tbl-comm "><div class="tbl-cell w120"><strong>XI</strong></div><div class="tbl-cell">Admission open From <strong>01/12/2021 To 04/07/2022</strong><div><em>Date of Birth between 01/04/2005 and 30/09/2007</em></div></div></div></div></div></div>
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'fourth'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Facilities:</h4><h5 class="heading-sm txt-green mt-4">Infrastructure</h5><ul class="facility-list"><!----><li><!----><i class="fa fa-check"></i><!----> AC classes </li><li><!----><i class="fa fa-check"></i><!----> Smart classes </li><li><!----><i class="fa fa-check"></i><!----> WIFI </li><li><!----><i class="fa fa-check"></i><!----> CCTV </li><li><!----><i class="fa fa-check"></i><!----> GPS bus tracking system </li><li><!----><i class="fa fa-check"></i><!----> Playground </li><li><!----><i class="fa fa-check"></i><!----> Auditorium </li><li><!----><i class="fa fa-check"></i><!----> Cafeteria </li><li><!----><i class="fa fa-check"></i><!----> Library </li><li><!----><i class="fa fa-check"></i><!----> Laboratories </li><li><!----><!----><i class="fa fa-times"></i> Elevators </li><li><!----><!----><i class="fa fa-times"></i> Boys hostel </li><li><!----><!----><i class="fa fa-times"></i> Girls hostel </li><li><!----><i class="fa fa-check"></i><!----> School bus </li><li><!----><!----><i class="fa fa-times"></i> Day boarding </li><li><!----><!----><i class="fa fa-times"></i> Meals </li><li><!----><i class="fa fa-check"></i><!----> Medical room </li></ul><h5 class="heading-sm txt-green mt-4">Extra-curricular activities</h5><ul class="facility-list"><!----><li><!----><i class="fa fa-check"></i><!----> Art and craft </li><li><!----><i class="fa fa-check"></i><!----> Nature environment activities </li><li><!----><i class="fa fa-check"></i><!----> Dance </li><li><!----><i class="fa fa-check"></i><!----> Debate </li><li><!----><i class="fa fa-check"></i><!----> Music </li><li><!----><i class="fa fa-check"></i><!----> Drama </li><li><!----><i class="fa fa-check"></i><!----> Picnics excursion </li><li><!----><i class="fa fa-check"></i><!----> Annual sports </li><li><!----><i class="fa fa-check"></i><!----> Annual exhibition </li><li><!----><i class="fa fa-check"></i><!----> Annual cultural  program </li></ul><h5 class="heading-sm txt-green mt-4">Sports &amp; fitness</h5><ul class="facility-list"><!----><li><!----><i class="fa fa-check"></i><!----> Yoga </li><li><!----><i class="fa fa-check"></i><!----> Gymnasium </li><li><!----><i class="fa fa-check"></i><!----> Indoor sports </li><li><!----><i class="fa fa-check"></i><!----> Outdoor sports </li><li><!----><i class="fa fa-check"></i><!----> Swimming pool </li><li><!----><i class="fa fa-check"></i><!----> Martial Art </li></ul></div>
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'fifth'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Academic Performance:</h4><div><div><div class="details"><p></p><p><strong>ICSE 2022</strong></p>
+          
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>No. of students Appeared&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                                <td>363</td>
+                              </tr>
+                              <tr>
+                                <td>No. of students Passed</td>
+                                <td>363</td>
+                              </tr>
+                              <tr>
+                                <td>Above 95%</td>
+                                <td>&nbsp;--</td>
+                              </tr>
+                              <tr>
+                                <td>Above 90%</td>
+                                <td>342</td>
+                              </tr>
+                              <tr>
+                                <td>Above 80%</td>
+                                <td>21</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                          <p><br>
+                          <strong>ISC 2022</strong></p>
+                          
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>No. of students Appeared&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                                <td>261</td>
+                              </tr>
+                              <tr>
+                                <td>No. of students Passed</td>
+                                <td>261</td>
+                              </tr>
+                              <tr>
+                                <td>Above 95%</td>
+                                <td>&nbsp;--</td>
+                              </tr>
+                              <tr>
+                                <td>Above 90%</td>
+                                <td>105</td>
+                              </tr>
+                              <tr>
+                                <td>Above 80%</td>
+                                <td>156</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p></p></div></div></div></div>
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card *ngSwitchCase="'sixth'">
+                      <ion-card-content>
+                        <div class="content-block"><h4 class="heading-xl">Annual Fee Structure:</h4>
+                          <ion-list>
+                            <ion-item>
+                              <ion-select interface="action-sheet" placeholder="Select Class">
+                                <ion-select-option value="apples">Class One</ion-select-option>
+                                <ion-select-option value="oranges">Class Two</ion-select-option>
+                                <ion-select-option value="bananas">Class Three</ion-select-option>
+                              </ion-select>
+                            </ion-item>
+                          </ion-list>
+                          <div><div> Minimum Fees: <div class="txt24">₹ 0</div></div><div> Maximum Fees: <div class="txt24">₹ 0</div></div></div></div>
+                      </ion-card-content>
+                    </ion-card>
+                  </div>
+                </div>
+                <!-- Segment Area End-->
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <p>null</p>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="Dashboard()">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="Messages()">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="people-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button (click)="MyProfile()" class="active">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-footer>
